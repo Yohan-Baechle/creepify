@@ -1,8 +1,5 @@
 "use client"
 
-import { Search as SearchIcon } from "lucide-react"
-import { useEffect, useState } from "react"
-
 import {
     CommandDialog,
     CommandEmpty,
@@ -11,6 +8,10 @@ import {
     CommandItem,
     CommandList,
 } from "@/components/ui/command"
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
+import { Search as SearchIcon } from "lucide-react"
+import { useEffect, useState } from "react"
+import { DialogDescription, DialogTitle } from "../ui/dialog"
 
 // Définir l'interface pour les posts
 interface Post {
@@ -56,6 +57,15 @@ export default function Search() {
                 <SearchIcon className="h-5 w-5 text-muted-foreground" />
             </button>
             <CommandDialog open={open} onOpenChange={setOpen}>
+                <DialogTitle>
+                    {" "}
+                    <VisuallyHidden>Menu</VisuallyHidden>
+                </DialogTitle>
+                <DialogDescription>
+                    <VisuallyHidden>
+                        Use the input below to search for stories.
+                    </VisuallyHidden>
+                </DialogDescription>
                 <CommandInput
                     placeholder="Search..."
                     value={search}
