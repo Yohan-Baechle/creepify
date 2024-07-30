@@ -1,3 +1,9 @@
+import Hero from "@/components/landing/Hero"
+
 export default function Home() {
-    return <main className="container"></main>
+    return (
+        <main className="container">
+            <Hero />
+        </main>
+    )
 }
