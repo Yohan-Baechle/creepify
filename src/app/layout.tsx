@@ -5,7 +5,7 @@ import { cookies } from "next/headers"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
-const cinzel = Cinzel({ subsets: ["latin"] })
+const cinzel = Cinzel({ subsets: ["latin"], variable: "--font-cinzel" })
 
 export const metadata: Metadata = {
     title: "Creepify",
@@ -26,8 +26,12 @@ export default function RootLayout({
 }) {
     const theme = getTheme()
     return (
-        <html lang="en" className={theme} style={{ colorScheme: theme }}>
-            <body className={`${inter.className} ${cinzel.className}`}>
+        <html
+            lang="en"
+            className={`${theme} scroll-smooth`}
+            style={{ colorScheme: theme }}
+        >
+            <body className={`${inter.className} ${cinzel.variable}`}>
                 <Provider>{children}</Provider>
             </body>
         </html>

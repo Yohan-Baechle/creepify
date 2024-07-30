@@ -6,9 +6,9 @@ export default function CTA() {
         <div className="w-full pb-32">
             <Link href="/signup">
                 <div
-                    className="flex flex-col items-center gap-8 rounded-md p-4 text-center lg:p-14"
+                    className="flex flex-col items-center gap-8 rounded-md p-8 text-center lg:p-16"
                     style={{
-                        backgroundImage: "url('/images/cta-banner3.jpg')",
+                        backgroundImage: "url('/images/cta-banner.jpg')",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                     }}
@@ -21,10 +21,8 @@ export default function CTA() {
                             Try our platform today!
                         </h3>
                         <p className="max-w-xl text-lg leading-relaxed tracking-tight text-gray-200">
-                            Join Creepify today to read spine-chilling tales,
-                            share your own stories, and connect with other
-                            horror enthusiasts. Experience the thrill of horror
-                            like never before!
+                            Join Creepify today and experience the thrill of
+                            horror like never before!
                         </p>
                     </div>
                 </div>
