@@ -93,7 +93,11 @@ export default function ContactForm() {
                                     <span className="text-red-600">*</span>
                                 </FormLabel>
                                 <FormControl>
-                                    <Input {...field} type="text" />
+                                    <Input
+                                        {...field}
+                                        type="text"
+                                        className="bg-primary/5"
+                                    />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -111,7 +115,11 @@ export default function ContactForm() {
                                     <span className="text-red-600">*</span>
                                 </FormLabel>
                                 <FormControl>
-                                    <Input {...field} type="text" />
+                                    <Input
+                                        {...field}
+                                        type="text"
+                                        className="bg-primary/5"
+                                    />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -129,7 +137,11 @@ export default function ContactForm() {
                                     <span className="text-red-600">*</span>
                                 </FormLabel>
                                 <FormControl>
-                                    <Input {...field} type="email" />
+                                    <Input
+                                        {...field}
+                                        type="email"
+                                        className="bg-primary/5"
+                                    />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -151,18 +163,27 @@ export default function ContactForm() {
                                     defaultValue={field.value}
                                 >
                                     <FormControl>
-                                        <SelectTrigger>
+                                        <SelectTrigger className="bg-primary/5">
                                             <SelectValue placeholder="Select a subject" />
                                         </SelectTrigger>
                                     </FormControl>
                                     <SelectContent className="SelectContent">
-                                        <SelectItem value="technical">
+                                        <SelectItem
+                                            value="technical"
+                                            className="bg-primary/5"
+                                        >
                                             Technical Issue
                                         </SelectItem>
-                                        <SelectItem value="commercial">
+                                        <SelectItem
+                                            value="commercial"
+                                            className="bg-primary/5"
+                                        >
                                             Commercial Inquiry
                                         </SelectItem>
-                                        <SelectItem value="other">
+                                        <SelectItem
+                                            value="other"
+                                            className="bg-primary/5"
+                                        >
                                             Other
                                         </SelectItem>
                                     </SelectContent>
@@ -183,7 +204,11 @@ export default function ContactForm() {
                                     <span className="text-red-600">*</span>
                                 </FormLabel>
                                 <FormControl>
-                                    <Textarea {...field} rows={12} />
+                                    <Textarea
+                                        {...field}
+                                        rows={12}
+                                        className="bg-primary/5"
+                                    />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -208,6 +233,7 @@ export default function ContactForm() {
                                         communication purposes. It will not be
                                         disclosed or sold to third parties.
                                     </FormLabel>
+                                    <FormMessage />
                                 </div>
                             </FormItem>
                         )}

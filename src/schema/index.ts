@@ -16,10 +16,8 @@ export const ContactSchema = z.object({
     message: z.string().min(1, {
         message: "Please enter your message",
     }),
-    consent: z
-        .boolean()
-        .refine(
-            (val) => val,
+    consent: z.boolean().refine((val) => val === true, {
+        message:
             "You must accept the processing of your personal data to continue.",
-        ),
+    }),
 })
