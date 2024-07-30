@@ -9,7 +9,19 @@ export default function Hero() {
             <div className="py-24 lg:py-32">
                 {/* Grid */}
                 <div className="grid gap-4 md:grid-cols-2 md:items-center md:gap-8 xl:gap-20">
-                    <div>
+                    {/* Col: Image */}
+                    <div className="relative z-50 order-1 ms-4 md:order-2">
+                        <Image
+                            className="w-full rounded-md"
+                            src="/images/bats.png"
+                            width={800}
+                            height={700}
+                            alt="Flying bats with a moon in the background"
+                            priority
+                        />
+                    </div>
+                    {/* Col: Text */}
+                    <div className="order-2 md:order-1">
                         <h1>
                             Dive <span className="">into Darkness</span> with{" "}
                             <span className="">Creepify</span>
@@ -32,18 +44,6 @@ export default function Hero() {
                             {/* End Review */}
                         </div>
                     </div>
-                    {/* Col */}
-                    <div className="relative z-10 ms-4">
-                        <Image
-                            className="w-full rounded-md"
-                            src="/images/bats.png"
-                            width={800}
-                            height={700}
-                            alt="Flying bats with a moon in the background"
-                            priority
-                        />
-                    </div>
-                    {/* End Col */}
                 </div>
                 {/* End Grid */}
             </div>
