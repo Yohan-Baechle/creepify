@@ -1,3 +1,4 @@
+import FAQs from "@/components/landing/FAQs"
 import FeaturedStories from "@/components/landing/FeaturedStories"
 import Features from "@/components/landing/Features"
 import Hero from "@/components/landing/Hero"
@@ -8,6 +9,7 @@ export default function Home() {
             <Hero />
             <Features />
             <FeaturedStories />
+            <FAQs />
         </main>
     )
 }
