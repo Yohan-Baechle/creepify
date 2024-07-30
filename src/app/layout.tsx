@@ -1,10 +1,11 @@
 import Provider from "@/components/layout/ThemeProvider"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Cinzel, Inter } from "next/font/google"
 import { cookies } from "next/headers"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
+const cinzel = Cinzel({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
     title: "Creepify",
@@ -26,7 +27,7 @@ export default function RootLayout({
     const theme = getTheme()
     return (
         <html lang="en" className={theme} style={{ colorScheme: theme }}>
-            <body className={inter.className}>
+            <body className={`${inter.className} ${cinzel.className}`}>
                 <Provider>{children}</Provider>
             </body>
         </html>

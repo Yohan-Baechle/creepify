@@ -1,3 +1,4 @@
+import CTA from "@/components/landing/CTA"
 import FAQs from "@/components/landing/FAQs"
 import FeaturedStories from "@/components/landing/FeaturedStories"
 import Features from "@/components/landing/Features"
@@ -10,6 +11,7 @@ export default function Home() {
             <Features />
             <FeaturedStories />
             <FAQs />
+            <CTA />
         </main>
     )
 }

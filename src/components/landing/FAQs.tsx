@@ -37,7 +37,8 @@ export default function FAQs() {
                 <div className="mx-auto w-full max-w-3xl">
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
-                            <AccordionTrigger>
+                            <AccordionTrigger className="text-left">
+                                {" "}
                                 How do I share my own story?
                             </AccordionTrigger>
                             <AccordionContent>
@@ -48,7 +49,8 @@ export default function FAQs() {
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
-                            <AccordionTrigger>
+                            <AccordionTrigger className="text-left">
+                                {" "}
                                 Is there a premium membership?
                             </AccordionTrigger>
                             <AccordionContent>
@@ -59,7 +61,8 @@ export default function FAQs() {
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-3">
-                            <AccordionTrigger>
+                            <AccordionTrigger className="text-left">
+                                {" "}
                                 How can I participate in events?
                             </AccordionTrigger>
                             <AccordionContent>
@@ -70,7 +73,8 @@ export default function FAQs() {
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-4">
-                            <AccordionTrigger>
+                            <AccordionTrigger className="text-left">
+                                {" "}
                                 How do I report a problem or issue?
                             </AccordionTrigger>
                             <AccordionContent>
@@ -80,7 +84,7 @@ export default function FAQs() {
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-5">
-                            <AccordionTrigger>
+                            <AccordionTrigger className="text-left">
                                 How can I upgrade to a premium membership?
                             </AccordionTrigger>
                             <AccordionContent>
@@ -92,7 +96,8 @@ export default function FAQs() {
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-6">
-                            <AccordionTrigger>
+                            <AccordionTrigger className="text-left">
+                                {" "}
                                 What types of stories can I find on Creepify?
                             </AccordionTrigger>
                             <AccordionContent>
