@@ -5,17 +5,8 @@ export default function CTA() {
     return (
         <div className="w-full pb-32">
             <Link href="/signup">
-                <div
-                    className="flex flex-col items-center gap-8 rounded-md p-8 text-center lg:p-16"
-                    style={{
-                        backgroundImage: "url('/images/cta-banner.jpg')",
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                    }}
-                >
-                    <div>
-                        <Badge className="bg-black">Get started</Badge>
-                    </div>
+                <div className="flex flex-col items-center gap-8 rounded-md bg-[url('/images/cta-banner.jpg')] bg-cover bg-bottom p-8 text-center lg:p-16">
+                    <Badge className="bg-black">Get started</Badge>
                     <div className="flex flex-col gap-2 text-white">
                         <h3 className="font-regular max-w-xl text-3xl tracking-tighter md:text-5xl">
                             Try our platform today!
