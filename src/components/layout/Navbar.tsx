@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { MountainIcon } from "lucide-react"
-import Link from "next/link"
-import Menu from "./Menu"
-import MobileSidebar from "./MobileSidebar"
-import Profile from "./Profile"
+import { MountainIcon } from "lucide-react";
+import Link from "next/link";
+import Menu from "./Menu";
+import MobileSidebar from "./MobileSidebar";
+import Profile from "./Profile";
 
 export default function Navbar() {
     return (
@@ -28,5 +28,5 @@ export default function Navbar() {
                 </div>
             </div>
         </header>
-    )
+    );
 }

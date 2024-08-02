@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { ContactSchema } from "@/schema"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { Loader, Send } from "lucide-react"
-import { useState } from "react"
-import { useForm } from "react-hook-form"
-import { toast, Toaster } from "sonner"
-import { z } from "zod"
+import { ContactSchema } from "@/schema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Loader, Send } from "lucide-react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { toast, Toaster } from "sonner";
+import { z } from "zod";
 
 import {
     Form,
@@ -15,22 +15,22 @@ import {
     FormItem,
     FormLabel,
     FormMessage,
-} from "@/components/ui/form"
+} from "@/components/ui/form";
 
-import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from "@/components/ui/select"
-import { Textarea } from "@/components/ui/textarea"
+} from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function ContactForm() {
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false);
 
     const form = useForm<z.infer<typeof ContactSchema>>({
         resolver: zodResolver(ContactSchema),
@@ -42,19 +42,19 @@ export default function ContactForm() {
             message: "",
             consent: false,
         },
-    })
+    });
 
     const onSubmit = (data: z.infer<typeof ContactSchema>) => {
-        setLoading(true)
+        setLoading(true);
         const sendMessage = async () => {
             const response = await fetch("/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data),
-            })
-            if (!response.ok) throw new Error("Error sending message.")
-            return response.json()
-        }
+            });
+            if (!response.ok) throw new Error("Error sending message.");
+            return response.json();
+        };
 
         toast.promise(sendMessage(), {
             loading: "Sending...",
@@ -66,16 +66,16 @@ export default function ContactForm() {
                     subject: "technical",
                     message: "",
                     consent: false,
-                })
-                setLoading(false)
-                return "Message sent successfully!"
+                });
+                setLoading(false);
+                return "Message sent successfully!";
             },
             error: (err) => {
-                setLoading(false)
-                return err.message || "An error occurred."
+                setLoading(false);
+                return err.message || "An error occurred.";
             },
-        })
-    }
+        });
+    };
 
     return (
         <Form {...form}>
@@ -253,5 +253,5 @@ export default function ContactForm() {
                 </Button>
             </form>
         </Form>
-    )
+    );
 }

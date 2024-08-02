@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
     CommandDialog,
@@ -7,46 +7,46 @@ import {
     CommandInput,
     CommandItem,
     CommandList,
-} from "@/components/ui/command"
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
-import { Search as SearchIcon } from "lucide-react"
-import { useEffect, useState } from "react"
-import { DialogDescription, DialogTitle } from "../ui/dialog"
+} from "@/components/ui/command";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { Search as SearchIcon } from "lucide-react";
+import { useEffect, useState } from "react";
+import { DialogDescription, DialogTitle } from "../ui/dialog";
 
 // Définir l'interface pour les posts
 interface Post {
-    id: number
-    title: string
-    body: string
+    id: number;
+    title: string;
+    body: string;
 }
 
 export default function Search() {
-    const [open, setOpen] = useState(false)
-    const [search, setSearch] = useState("")
-    const [posts, setPosts] = useState<Post[]>([])
-    const [loading, setLoading] = useState(false)
+    const [open, setOpen] = useState(false);
+    const [search, setSearch] = useState("");
+    const [posts, setPosts] = useState<Post[]>([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         const fetchPosts = async () => {
-            setLoading(true)
+            setLoading(true);
             try {
                 const response = await fetch(
                     "https://jsonplaceholder.typicode.com/posts",
-                )
-                const data = await response.json()
-                setPosts(data)
+                );
+                const data = await response.json();
+                setPosts(data);
             } catch (error) {
-                console.error("Error fetching posts:", error)
+                console.error("Error fetching posts:", error);
             }
-            setLoading(false)
-        }
+            setLoading(false);
+        };
 
-        fetchPosts()
-    }, [])
+        fetchPosts();
+    }, []);
 
     const filteredPosts = posts.filter((post) =>
         post.title.toLowerCase().includes(search.toLowerCase()),
-    )
+    );
 
     return (
         <>
@@ -95,5 +95,5 @@ export default function Search() {
                 </CommandList>
             </CommandDialog>
         </>
-    )
+    );
 }

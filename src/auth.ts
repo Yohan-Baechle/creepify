@@ -1,6 +1,5 @@
-import NextAuth from "next-auth"
-import GithubProvider from "next-auth/providers/github"
-import GoogleProvider from "next-auth/providers/google"
+import NextAuth from "next-auth";
+import GoogleProvider from "next-auth/providers/google";
 
 export const {
     handlers: { GET, POST },
@@ -21,9 +20,5 @@ export const {
                 },
             },
         }),
-        GithubProvider({
-            clientId: process.env.GITHUBCLIENT_ID,
-            clientSecret: process.env.GITHUB_CLIENT_SECRET,
-        }),
     ],
-})
+});

@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { Star } from "lucide-react"
-import Image from "next/image"
+import { Button } from "@/components/ui/button";
+import { Star } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
     return (
@@ -50,7 +50,7 @@ export default function Hero() {
             <div className="shadow"></div>
             {/* End Hero */}
         </section>
-    )
+    );
 }
 
 function Review() {
@@ -104,5 +104,5 @@ function Review() {
                 </svg>
             </div>
         </div>
-    )
+    );
 }

@@ -1,5 +1,5 @@
-import { BookOpen, PenTool, Users } from "lucide-react"
-import Image from "next/image"
+import { BookOpen, PenTool, Users } from "lucide-react";
+import Image from "next/image";
 
 export default function Features() {
     return (
@@ -72,5 +72,5 @@ export default function Features() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

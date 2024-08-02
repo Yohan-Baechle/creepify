@@ -1,10 +1,10 @@
-import Link from "next/link"
+import Link from "next/link";
 
 interface NavigationItem {
-    title: string
-    href?: string
-    description?: string
-    items?: { title: string; href: string }[]
+    title: string;
+    href?: string;
+    description?: string;
+    items?: { title: string; href: string }[];
 }
 
 const navigationItems: NavigationItem[] = [
@@ -30,10 +30,10 @@ const navigationItems: NavigationItem[] = [
         description: "Get in touch with us.",
         items: [{ title: "Contact Us", href: "/contact" }],
     },
-]
+];
 
 export default function Footer() {
-    const currentYear = new Date().getFullYear()
+    const currentYear = new Date().getFullYear();
 
     return (
         <div className="w-full border-t bg-background pt-20">
@@ -100,5 +100,5 @@ export default function Footer() {
                 <p>&copy; {currentYear} | All Rights Reserved </p>
             </div>
         </div>
-    )
+    );
 }

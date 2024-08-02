@@ -1,30 +1,30 @@
-import Provider from "@/components/layout/ThemeProvider"
-import type { Metadata } from "next"
-import { Cinzel, Inter } from "next/font/google"
-import { cookies } from "next/headers"
-import "./globals.css"
+import Provider from "@/components/layout/ThemeProvider";
+import type { Metadata } from "next";
+import { Cinzel, Inter } from "next/font/google";
+import { cookies } from "next/headers";
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] })
-const cinzel = Cinzel({ subsets: ["latin"], variable: "--font-cinzel" })
+const inter = Inter({ subsets: ["latin"] });
+const cinzel = Cinzel({ subsets: ["latin"], variable: "--font-cinzel" });
 
 export const metadata: Metadata = {
     title: "Creepify",
     description: "Your platform description",
-}
+};
 
 function getTheme() {
-    const cookieStore = cookies()
-    const themeCookie = cookieStore.get("theme")
-    const theme = themeCookie ? themeCookie.value : "dark"
-    return theme
+    const cookieStore = cookies();
+    const themeCookie = cookieStore.get("theme");
+    const theme = themeCookie ? themeCookie.value : "dark";
+    return theme;
 }
 
 export default function RootLayout({
     children,
 }: {
-    children: React.ReactNode
+    children: React.ReactNode;
 }) {
-    const theme = getTheme()
+    const theme = getTheme();
     return (
         <html
             lang="en"
@@ -35,5 +35,5 @@ export default function RootLayout({
                 <Provider>{children}</Provider>
             </body>
         </html>
-    )
+    );
 }

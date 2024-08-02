@@ -1,4 +1,4 @@
-import * as z from "zod"
+import * as z from "zod";
 
 export const ContactSchema = z.object({
     firstname: z.string().min(1, {
@@ -20,4 +20,11 @@ export const ContactSchema = z.object({
         message:
             "You must accept the processing of your personal data to continue.",
     }),
-})
+});
+
+export const loginSchema = z.object({
+    email: z.string().email({ message: "Please enter a valid email address." }),
+    password: z.string().min(8, {
+        message: "Password must be at least 8 characters.",
+    }),
+});

@@ -57,7 +57,7 @@ export const pricingPlans = [
             "Exclusive forum",
         ],
     },
-]
+];
 
 export const allFeatures = [
     "Access to free stories",
@@ -77,4 +77,4 @@ export const allFeatures = [
     "Early access to new stories",
     "Offline reading",
     "Exclusive forum",
-]
+];

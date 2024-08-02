@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import Image from "next/image"
-import LoginForm from "./SignInForm"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import Image from "next/image";
+import LoginForm from "./SignInForm";
 
 export default function SignUpForm() {
     return (
@@ -100,5 +100,5 @@ export default function SignUpForm() {
                 />
             </div>
         </div>
-    )
+    );
 }

@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import * as React from "react"
+import Link from "next/link";
+import * as React from "react";
 
 import {
     NavigationMenu,
@@ -11,10 +11,10 @@ import {
     NavigationMenuList,
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import { cn } from "@/lib/utils"
-import { Icons } from "./Icons"
-import Search from "./Search"
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
+import { Icons } from "./Icons";
+import Search from "./Search";
 export default function Menu() {
     return (
         <NavigationMenu>
@@ -80,7 +80,7 @@ export default function Menu() {
                 <Search />
             </NavigationMenuList>
         </NavigationMenu>
-    )
+    );
 }
 
 const ListItem = React.forwardRef<
@@ -107,7 +107,7 @@ const ListItem = React.forwardRef<
                 </a>
             </NavigationMenuLink>
         </li>
-    )
-})
+    );
+});
 
-ListItem.displayName = "ListItem"
+ListItem.displayName = "ListItem";

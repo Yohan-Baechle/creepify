@@ -1,6 +1,6 @@
-import { Badge } from "@/components/ui/badge"
-import { Check } from "lucide-react"
-import ContactForm from "./ContactForm"
+import { Badge } from "@/components/ui/badge";
+import { Check } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 export default function ContactSection() {
     return (
@@ -60,5 +60,5 @@ export default function ContactSection() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

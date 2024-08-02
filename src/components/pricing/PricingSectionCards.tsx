@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
     Card,
     CardContent,
@@ -9,16 +9,16 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card"
-import { Label } from "@/components/ui/label"
+} from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from "@/components/ui/select"
-import { Switch } from "@/components/ui/switch"
+} from "@/components/ui/select";
+import { Switch } from "@/components/ui/switch";
 import {
     Table,
     TableBody,
@@ -26,14 +26,14 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-} from "@/components/ui/table"
-import { allFeatures, pricingPlans } from "@/lib/pricingPlans"
-import { CheckIcon } from "lucide-react"
-import { useState } from "react"
+} from "@/components/ui/table";
+import { allFeatures, pricingPlans } from "@/lib/pricingPlans";
+import { CheckIcon } from "lucide-react";
+import { useState } from "react";
 
 export default function PricingSectionCards() {
-    const [isAnnual, setIsAnnual] = useState(false)
-    const [currency, setCurrency] = useState<"usd" | "eur">("usd")
+    const [isAnnual, setIsAnnual] = useState(false);
+    const [currency, setCurrency] = useState<"usd" | "eur">("usd");
 
     return (
         <>
@@ -203,5 +203,5 @@ export default function PricingSectionCards() {
                 </div>
             </div>
         </>
-    )
+    );
 }

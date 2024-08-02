@@ -1,9 +1,9 @@
-"use client"
-import { ThemeProvider } from "next-themes"
-import { ReactNode } from "react"
+"use client";
+import { ThemeProvider } from "next-themes";
+import { ReactNode } from "react";
 
 interface ProviderProps {
-    children: ReactNode
+    children: ReactNode;
 }
 
 const Provider: React.FC<ProviderProps> = ({ children }) => {
@@ -16,7 +16,7 @@ const Provider: React.FC<ProviderProps> = ({ children }) => {
         >
             {children}
         </ThemeProvider>
-    )
-}
+    );
+};
 
-export default Provider
+export default Provider;

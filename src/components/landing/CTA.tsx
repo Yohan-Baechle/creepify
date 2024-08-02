@@ -1,5 +1,5 @@
-import { Badge } from "@/components/ui/badge"
-import Link from "next/link"
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 export default function CTA() {
     return (
@@ -19,5 +19,5 @@ export default function CTA() {
                 </div>
             </Link>
         </div>
-    )
+    );
 }

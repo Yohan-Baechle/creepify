@@ -1,5 +1,5 @@
-import { Badge } from "@/components/ui/badge"
-import { Book, Ghost, Skull } from "lucide-react"
+import { Badge } from "@/components/ui/badge";
+import { Book, Ghost, Skull } from "lucide-react";
 
 export default function FeaturedStories() {
     return (
@@ -69,5 +69,5 @@ export default function FeaturedStories() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

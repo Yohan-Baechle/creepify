@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
     Collapsible,
     CollapsibleContent,
     CollapsibleTrigger,
-} from "@/components/ui/collapsible"
+} from "@/components/ui/collapsible";
 import {
     Sheet,
     SheetContent,
     SheetDescription,
     SheetTitle,
     SheetTrigger,
-} from "@/components/ui/sheet"
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
-import { ChevronRightIcon, MenuIcon, MountainIcon } from "lucide-react"
-import Link from "next/link"
+} from "@/components/ui/sheet";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { ChevronRightIcon, MenuIcon, MountainIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function MobileSidebar() {
     return (
@@ -94,5 +94,5 @@ export default function MobileSidebar() {
                 </div>
             </SheetContent>
         </Sheet>
-    )
+    );
 }

@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
     Collapsible,
     CollapsibleContent,
     CollapsibleTrigger,
-} from "@/components/ui/collapsible"
+} from "@/components/ui/collapsible";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -11,8 +11,8 @@ import {
     DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+} from "@/components/ui/dropdown-menu";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
     CalendarIcon,
     ChevronRightIcon,
@@ -23,10 +23,10 @@ import {
     QuoteIcon,
     StarIcon,
     TagIcon,
-} from "lucide-react"
-import Link from "next/link"
-import ThemeToggle from "./ThemeToggle"
-import UserNav from "./UserNav"
+} from "lucide-react";
+import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
+import UserNav from "./UserNav";
 
 export default function Profile() {
     return (
@@ -146,5 +146,5 @@ export default function Profile() {
                 </SheetContent>
             </Sheet>
         </div>
-    )
+    );
 }

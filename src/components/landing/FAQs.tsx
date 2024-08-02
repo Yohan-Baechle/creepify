@@ -3,11 +3,11 @@ import {
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-} from "@/components/ui/accordion"
-import { Badge } from "@/components/ui/badge"
-import { buttonVariants } from "@/components/ui/button"
-import { Mail } from "lucide-react"
-import Link from "next/link"
+} from "@/components/ui/accordion";
+import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
+import { Mail } from "lucide-react";
+import Link from "next/link";
 
 export default function FAQs() {
     return (
@@ -112,5 +112,5 @@ export default function FAQs() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
