@@ -10,7 +10,7 @@ export default function Hero() {
                 {/* Grid */}
                 <div className="grid gap-4 md:grid-cols-2 md:items-center md:gap-8 xl:gap-20">
                     {/* Col: Image */}
-                    <div className="relative z-50 order-1 ms-4 md:order-2">
+                    <div className="relative z-10 order-1 ms-4 md:order-2">
                         <Image
                             className="w-full rounded-md"
                             src="/images/bats.png"
