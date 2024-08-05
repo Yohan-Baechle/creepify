@@ -18,13 +18,26 @@ export const ContactSchema = z.object({
     }),
     consent: z.boolean().refine((val) => val === true, {
         message:
-            "You must accept the processing of your personal data to continue.",
+            "You must accept the processing of your personal data to continue",
     }),
 });
 
+export const registerSchema = z
+    .object({
+        email: z.string().email("Invalid email address"),
+        password: z
+            .string()
+            .min(6, "Password must be at least 6 characters long"),
+        confirmPassword: z.string().min(1, "Password confirmation is required"),
+    })
+    .refine((data) => data.password === data.confirmPassword, {
+        message: "Passwords don't match",
+        path: ["confirmPassword"],
+    });
+
 export const loginSchema = z.object({
-    email: z.string().email({ message: "Please enter a valid email address." }),
-    password: z.string().min(8, {
-        message: "Password must be at least 8 characters.",
+    email: z.string().email({ message: "Email is required" }),
+    password: z.string().min(1, {
+        message: "Password is required",
     }),
 });

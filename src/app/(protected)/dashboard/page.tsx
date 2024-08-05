@@ -4,8 +4,7 @@ export default async function DashboardPage() {
     const session = await auth();
     return (
         <main className="container">
-            Protected page
-            {JSON.stringify(session)}
+            Protected page : {JSON.stringify(session)}
         </main>
     );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { ContactSchema } from "@/schema";
+import { ContactSchema } from "@/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader, Send } from "lucide-react";
 import { useState } from "react";

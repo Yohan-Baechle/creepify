@@ -2,7 +2,12 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import * as z from "zod";
 
+import { login } from "@/app/actions/login";
+import { FormError } from "@/components/login/FormError";
+import { FormSuccess } from "@/components/login/FormSuccess";
+import GoogleButton from "@/components/login/GoogleButton";
 import { Button } from "@/components/ui/button";
 import {
     Dialog,
@@ -22,16 +27,19 @@ import {
     FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { loginSchema } from "@/schema";
+import { loginSchema } from "@/schemas";
 import Link from "next/link";
-import { ReactNode } from "react";
-import GoogleButton from "./GoogleButton";
+import { ReactNode, useState, useTransition } from "react";
 
 interface LoginFormProps {
     trigger?: ReactNode;
 }
 
 export default function SignInForm({ trigger }: LoginFormProps) {
+    const [error, setError] = useState<string | undefined>();
+    const [success, setSuccess] = useState<string | undefined>();
+    const [isPending, startTransition] = useTransition();
+
     const form = useForm({
         resolver: zodResolver(loginSchema),
         defaultValues: {
@@ -39,6 +47,18 @@ export default function SignInForm({ trigger }: LoginFormProps) {
             password: "",
         },
     });
+
+    const onSubmit = (values: z.infer<typeof loginSchema>) => {
+        setError("");
+        setSuccess("");
+
+        startTransition(() => {
+            login(values).then((data) => {
+                setError(data.error);
+                setSuccess(data.success);
+            });
+        });
+    };
 
     return (
         <Dialog>
@@ -53,7 +73,10 @@ export default function SignInForm({ trigger }: LoginFormProps) {
                     </DialogDescription>
                 </DialogHeader>
                 <Form {...form}>
-                    <form className="space-y-8">
+                    <form
+                        className="space-y-8"
+                        onSubmit={form.handleSubmit(onSubmit)}
+                    >
                         <FormField
                             control={form.control}
                             name="email"
@@ -62,7 +85,8 @@ export default function SignInForm({ trigger }: LoginFormProps) {
                                     <FormLabel>Email</FormLabel>
                                     <FormControl>
                                         <Input
-                                            placeholder="m@example.com"
+                                            disabled={isPending}
+                                            placeholder="email@example.com"
                                             {...field}
                                         />
                                     </FormControl>
@@ -78,6 +102,7 @@ export default function SignInForm({ trigger }: LoginFormProps) {
                                     <FormLabel>Password</FormLabel>
                                     <FormControl>
                                         <Input
+                                            disabled={isPending}
                                             type="password"
                                             placeholder="••••••••"
                                             {...field}
@@ -87,7 +112,13 @@ export default function SignInForm({ trigger }: LoginFormProps) {
                                 </FormItem>
                             )}
                         />
-                        <Button type="submit" className="w-full">
+                        <FormSuccess message={success} />
+                        <FormError message={error} />
+                        <Button
+                            disabled={isPending}
+                            type="submit"
+                            className="w-full"
+                        >
                             Login
                         </Button>
                     </form>
